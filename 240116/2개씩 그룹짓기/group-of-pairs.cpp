@@ -2,9 +2,9 @@
 #include <algorithm>
 using namespace std;
 
-int n, arr[1010], ans=0;
+int n, arr[2010], ans=0;
 
-// 합의 최댓값이 최소가 되도록
+// 합의 최댓값이 최소가 되도록 -> 최댓값 출력
 // 그룹 내 숫자 개수 무조건 2개
 
 int main() {
