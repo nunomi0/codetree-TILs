@@ -6,37 +6,45 @@ using namespace std;
 class Student {
     public :
         string name;
-        int kor;
-        int eng;
-        int math;
-        Student(string name, int kor, int eng, int math){
+        int score[3];
+        Student(string name, int score[3]){
             this->name=name;
-            this->kor=kor;
-            this->eng=eng;
-            this->math=math;
+            for (int i = 0; i<3; i++){
+                this->score[i]=score[i];
+            }
         }
         Student(){}
 };
 
 bool cmp(Student a, Student b) {
-    if (a.kor!=b.kor) return a.kor>b.kor;
-    if (a.eng!=b.eng) return a.eng>b.eng;
-    return a.math>b.math;
+    for (int i = 0; i<3; i++){
+        if (a.score[i]!=b.score[i]) return a.score[i]>b.score[i];
+    }
 }
 
-int n, kor, eng, math;
+int n,score[3];
 string name;
 Student student[20];
 
 int main() {
     cin >> n;
     for (int i = 0; i<n; i++){
-        cin >> name >> kor >> eng >> math;
-        student[i]=Student(name,kor,eng,math);
+        cin >> name;
+        for (int j = 0; j<3; j++){
+            cin >> score[j];
+        }
+        student[i]=Student(name,score);
     }
+
     sort(student,student+n,cmp);
+
     for (int i = 0; i<n; i++){
-        cout << student[i].name << ' ' << student[i].kor << ' ' << student[i].eng << ' ' << student[i].math << '\n';
+        cout << student[i].name << ' ';
+        for (int j = 0; j<3; j++){
+            cout << student[i].score[j] << ' ';
+        }
+        cout << '\n';
     }
+    
     return 0;
 }
