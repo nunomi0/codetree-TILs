@@ -35,6 +35,9 @@ int main() {
         student[i]=Student(name,h,w);
     }
 
+    cout << fixed;
+    cout.precision(1);
+    
     cout << "name\n";
     sort(student,student+5,cmp1);
     for (int i = 0; i<5; i++){
