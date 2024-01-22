@@ -16,7 +16,8 @@ class Dot {
 };
 
 bool cmp(Dot a, Dot b){
-    return (abs(a.x)+abs(a.y)<abs(b.x)+abs(b.y));
+    if (abs(a.x)+abs(a.y)!=abs(b.x)+abs(b.y)) return (abs(a.x)+abs(a.y)<abs(b.x)+abs(b.y));
+    else return a.num<b.num;
 }
 
 int n,x,y;
