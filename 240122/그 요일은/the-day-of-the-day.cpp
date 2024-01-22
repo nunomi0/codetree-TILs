@@ -14,15 +14,13 @@ int main() {
     for (int i = m1; i<m2; i++){
         cnt+=months[i];
     }
-    cnt+=-d1-1+d2;
-
+    cnt+=-d1+d2;
     for (int i = 0; i<7; i++){
         if (day==days[i]) {
-            cnt+=i;
+            cnt-=i;
             break;
         }
     }
-
     cout << cnt/7;
 
     return 0;
