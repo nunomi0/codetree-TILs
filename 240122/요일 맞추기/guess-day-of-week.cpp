@@ -10,14 +10,21 @@ int main() {
 
     cin >> m1 >> d1 >> m2 >> d2;
 
-    int cnt=0;
+    bool check=0;
 
+    if (m1>m2 || (m1==m2 && d1>d2)){
+        check=1;
+        swap(m1,m2);
+        swap(d1,d2);
+    }
+
+    int cnt=0;
     for (int i = m1; i<=m2; i++){
         cnt+=months[i];
     }
     cnt-=d1+months[m2]-d2;
     
-    cout << days[(cnt+7*99999)%7];
+    cout << days[((1-2*check)*cnt+check*7*99999)%7];
 
     return 0;
 }
