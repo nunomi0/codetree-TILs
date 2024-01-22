@@ -1,4 +1,5 @@
 #include <iostream>
+#include <algorithm>
 using namespace std;
 
 
@@ -16,16 +17,10 @@ int main() {
     }
     cnt+=-d1+d2;
 
-    int day_cnt;
-    for (int i = 0; i<7; i++){
-        if (day==days[i]) {
-            day_cnt=i;
-        }
-    }
-
-    int ans=cnt/7;
-    if (cnt>=0 && cnt%7>=day_cnt) ans++;
-    cout << ans;
+    auto iter = find(days, days+7, day);
+    int idx = distance(days, iter);
+    
+    cout << cnt/7+(cnt>=0 && cnt%7>=idx);
 
     return 0;
 }
