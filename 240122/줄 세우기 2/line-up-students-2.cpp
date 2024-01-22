@@ -6,7 +6,7 @@ int n,h,w;
 pair<pair<int,int>,int> s[1010]; // h w i
 
 bool cmp(pair<pair<int,int>,int> a, pair<pair<int,int>,int> b){
-    if (a.first.second!=b.first.second) return a.first.second<b.first.second;
+    if (a.first.first!=b.first.first) return a.first.first<b.first.first;
     return a.first.second>b.first.second;
 }
 
