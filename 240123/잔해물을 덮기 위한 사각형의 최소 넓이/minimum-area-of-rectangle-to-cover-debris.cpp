@@ -25,6 +25,7 @@ int main() {
             }
         }
     }
-    cout << (mxx-mnx+1)*(mxy-mny+1);
+    if (mnx==9999) cout << 0;
+    else cout << (mxx-mnx+1)*(mxy-mny+1);
     return 0;
 }
