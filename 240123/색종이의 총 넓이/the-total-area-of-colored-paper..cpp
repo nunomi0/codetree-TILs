@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-int n,x,y,arr[3010][3010],ans=0;
+int n,x,y,arr[310][310],ans=0;
 
 
 int main() {
@@ -10,7 +10,7 @@ int main() {
         cin >> x >> y;
         for (int i = 0; i<8; i++){
             for (int j = 0; j<8; j++){
-                arr[x+i+8][y+j+8]++;
+                arr[x+i+100][y+j+100]++;
             }
         }
     }
