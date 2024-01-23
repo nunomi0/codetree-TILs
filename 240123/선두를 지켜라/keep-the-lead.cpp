@@ -38,7 +38,7 @@ int main() {
         while (t--) b[bt++] = b[bt - 1] + v;
     }
 
-    for (int i = 2; i <= 1000; i++) {
+    for (int i = 2; i <= min(at,bt); i++) {
         if ((a[1] > b[1] && ans % 2 == 0) && a[i] < b[i]) ans++;
         //if ((a가 선두로 시작해서 이전에 a가 선두였는데) && (현재 b가 선두로 바뀐 경우)) ans++;
 
