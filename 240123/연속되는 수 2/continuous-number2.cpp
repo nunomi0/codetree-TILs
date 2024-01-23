@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-int n,x,mx=0,mx_cnt=0,cur_cnt,cur;
+int n,x,mx=0,mx_cnt=1,cur_cnt,cur;
 
 
 int main() {
