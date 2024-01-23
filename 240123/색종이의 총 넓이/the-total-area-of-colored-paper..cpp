@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-int n,x,y,arr[210][210],ans=0;
+int n,x,y,arr[310][310],ans=0;
 
 
 int main() {
@@ -17,7 +17,7 @@ int main() {
 
     for (int i = 0; i<=200; i++){
         for (int j = 0; j<=200; j++){
-            ans+=(bool)arr[i][j];
+            if (arr[i][j]) ans++;
         }
     }
 
