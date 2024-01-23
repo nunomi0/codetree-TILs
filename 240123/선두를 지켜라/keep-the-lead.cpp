@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-int n, m, v, t, a[1010], b[1010], at = 0, bt = 0, ans = 0;
+int n, m, v, t, a[1000010], b[1000010], at = 0, bt = 0, ans = 0;
 // a가 선두로 시작할 경우 (a[1]>b[1]인 경우) : ans%2==0 (a[1]<b[1])이면 a가 선두, ans%2==1 (a[1]>b[1])이면 b가 선두
 // b가 선두로 시작할 경우 (a[1]<b[1]인 경우) : ans%2==0 (a[1]>b[1])이면 b가 선두, ans%2==1 (a[1]<b[1])이면 a가 선두
 
