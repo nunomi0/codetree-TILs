@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-int n,pre,cur,cnt=1,ans=0;
+int n,pre,cur,cnt=1,ans=1;
 
 int main() {
     cin >> n;
