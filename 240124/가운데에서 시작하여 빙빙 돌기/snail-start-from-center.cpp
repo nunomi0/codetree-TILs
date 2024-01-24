@@ -8,10 +8,6 @@ int dy[4]={1,0,-1,0};
 
 int main() {
     cin >> n;
-    if (n==1) {
-        cout << 1;
-        return 0;
-    }   
 
     int x=n/2;
     int y=n/2;
@@ -20,9 +16,6 @@ int main() {
 
     while (true){
         for (int i = 0; i<abs(dist); i++){
-            x+=dx[dir];
-            y+=dy[dir];
-            arr[x][y]=idx++;
             if (x==n-1 && y==n-1) {
                 for (int i = 0; i<n; i++){
                     for (int j = 0; j<n; j++){
@@ -32,6 +25,9 @@ int main() {
                 }
                 return 0;
             }
+            x+=dx[dir];
+            y+=dy[dir];
+            arr[x][y]=idx++;
         }
         
         dir=(dir+1)%4;
