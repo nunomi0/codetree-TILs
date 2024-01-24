@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-int n,arr[110][110],dir=0,dist=1,idx=2;
+int n,arr[1010][1010],dir=0,dist=1,idx=2;
 int dx[4]={0,-1,0,1};
 int dy[4]={1,0,-1,0};
 
