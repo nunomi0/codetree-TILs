@@ -8,7 +8,11 @@ int dy[4]={1,0,-1,0};
 
 int main() {
     cin >> n;
-
+    if (n==1) {
+        cout << 1;
+        return 0;
+    }   
+    
     int x=n/2;
     int y=n/2;
 
