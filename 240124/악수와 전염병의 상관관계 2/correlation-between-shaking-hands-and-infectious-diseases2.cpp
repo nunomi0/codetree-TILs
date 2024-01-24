@@ -18,7 +18,7 @@ int main() {
     }
     sort(handshake.begin(),handshake.end());
 
-    for (int i = 0; i<=handshake.size(); i++){
+    for (int i = 0; i<handshake.size(); i++){
         x=handshake[i].second.first;
         y=handshake[i].second.second;
         if (virus[x]>1 || virus[y]>1){
