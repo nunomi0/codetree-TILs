@@ -4,7 +4,7 @@ using namespace std;
 
 int n,a,b,c,visited[100010],tmp=0;
 long long mx=0;
-vector<pair<int,int>> v[100010];
+vector<pair<int,long long>> v[100010];
 
 void recur(int cur, long long cnt){
     visited[cur]=1;
