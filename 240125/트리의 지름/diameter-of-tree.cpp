@@ -2,10 +2,11 @@
 #include <vector>
 using namespace std;
 
-int n,a,b,c,visited[100010],tmp,mx=0;
+int n,a,b,c,visited[100010],tmp=0;
+long long mx=0;
 vector<pair<int,int>> v[100010];
 
-void recur(int cur, int cnt){
+void recur(int cur, long long cnt){
     visited[cur]=1;
     if (cnt>mx){
         mx=cnt;
