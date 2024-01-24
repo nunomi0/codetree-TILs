@@ -12,7 +12,7 @@ int main() {
         cout << 1;
         return 0;
     }   
-    
+
     int x=n/2;
     int y=n/2;
 
@@ -22,7 +22,6 @@ int main() {
         for (int i = 0; i<abs(dist); i++){
             x+=dx[dir];
             y+=dy[dir];
-            if (x<0 || y<0) break;
             arr[x][y]=idx++;
             if (x==n-1 && y==n-1) {
                 for (int i = 0; i<n; i++){
