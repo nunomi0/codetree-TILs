@@ -35,6 +35,4 @@ int main() {
         if (dist<0) dist=abs(dist)+1;
         else dist*=-1;
     }
-
-    return 0;
 }
