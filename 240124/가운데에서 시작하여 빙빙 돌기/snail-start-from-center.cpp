@@ -15,9 +15,10 @@ int main() {
     arr[x][y]=1;
 
     while (true){
-        for (int i = 0; i<abs(dist); i++){\
+        for (int i = 0; i<abs(dist); i++){
             x+=dx[dir];
             y+=dy[dir];
+            if (x<0 || y<0) break;
             arr[x][y]=idx++;
             if (x==n-1 && y==n-1) {
                 for (int i = 0; i<n; i++){
