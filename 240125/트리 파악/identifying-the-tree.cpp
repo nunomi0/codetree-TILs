@@ -31,11 +31,9 @@ int main() {
     // a가 먼저 시작 -> 짝수 번 째 턴(b차례)에 모든 리프에 대한 dist가 0 (남은 dist 합==0) -> a 승리
     // 리프노드의 dist 합이 홀수이면 a 승리
 
-    for (int i = 1; i<=n; i++){
-        if (leaf[i]) ans+=dist[i];
-    }
+    for (int i = 1; i<=n; i++) if (leaf[i]) ans+=dist[i];
     
-    cout << ans;
+    cout << ans%2;
 
     return 0;
 }
