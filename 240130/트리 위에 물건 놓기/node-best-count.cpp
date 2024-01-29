@@ -15,6 +15,7 @@ void recur(int cur){
         }
     }
 
+    int mx[2]={dp[cur][0],dp[cur][1]};
     int mn[2]={dp[cur][0],dp[cur][1]};
 
     for (int i = 0; i<v[cur].size(); i++){
@@ -22,10 +23,12 @@ void recur(int cur){
         if (visited[nxt]) continue;
         
         recur(nxt);
-        for (int j = 0; j<2; j++) mn[j]=min(mn[j],dp[nxt][j]);
-
+        for (int j = 0; j<2; j++) {
+            mx[j]=max(mx[j],dp[nxt][j]);
+            mn[j]=min(mn[j],dp[nxt][j]);
+        }        
     }
-    dp[cur][0]=mn[1];
+    dp[cur][0]=min(mx[0],mn[1]);
     dp[cur][1]=min(mn[0],mn[1])+1;
 }
 
