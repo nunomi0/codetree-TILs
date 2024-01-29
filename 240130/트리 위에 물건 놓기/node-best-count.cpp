@@ -28,7 +28,7 @@ void recur(int cur){
             mn[j]=min(mn[j],dp[nxt][j]);
         }        
     }
-    dp[cur][0]=min(mx[0],mn[1]);
+    dp[cur][0]=max(mx[0],mn[1]);
     dp[cur][1]=min(mn[0],mn[1])+1;
 }
 
