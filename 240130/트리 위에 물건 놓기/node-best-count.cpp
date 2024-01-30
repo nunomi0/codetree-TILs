@@ -33,6 +33,7 @@ void recur(int cur){
 
     dp[cur][0]=zero;
     dp[cur][1]=one+1;
+
 }
 
 int main() {
@@ -46,7 +47,7 @@ int main() {
 
     for (int i = 0; i<=n; i++) {
         for (int j = 0; j<2; j++){
-            dp[i][j]=99999;
+            dp[i][j]=999999999;
         }
     }
 
