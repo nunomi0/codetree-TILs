@@ -11,25 +11,28 @@ void recur(int cur){
 
     if (v[cur].size()==1 && visited[v[cur][0]]) {
         for (int j = 0; j<2; j++){
-            dp[cur][j]=0;
+            dp[cur][j]=j;
         }
     }
 
     int mx[2]={dp[cur][0],dp[cur][1]};
     int mn[2]={dp[cur][0],dp[cur][1]};
+    // int mn[2]={dp[cur][0],dp[cur][1]};
 
+    int zero=0;
+    int one=0;
     for (int i = 0; i<v[cur].size(); i++){
         int nxt=v[cur][i];
         if (visited[nxt]) continue;
         
         recur(nxt);
-        for (int j = 0; j<2; j++) {
-            mx[j]=max(mx[j],dp[nxt][j]);
-            mn[j]=min(mn[j],dp[nxt][j]);
-        }        
+
+        zero+=dp[nxt][1];
+        one=max(one, min(dp[nxt][0],dp[nxt][1]));
     }
-    dp[cur][0]=max(mx[0],mn[1]);
-    dp[cur][1]=min(mn[0],mn[1])+1;
+
+    dp[cur][0]=zero;
+    dp[cur][1]=one+1;
 }
 
 int main() {
@@ -43,7 +46,7 @@ int main() {
 
     for (int i = 0; i<=n; i++) {
         for (int j = 0; j<2; j++){
-            dp[i][j]=999999999;
+            dp[i][j]=99999;
         }
     }
 
