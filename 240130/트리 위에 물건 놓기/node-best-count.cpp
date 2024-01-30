@@ -15,10 +15,6 @@ void recur(int cur){
         }
     }
 
-    int mx[2]={dp[cur][0],dp[cur][1]};
-    int mn[2]={dp[cur][0],dp[cur][1]};
-    // int mn[2]={dp[cur][0],dp[cur][1]};
-
     int zero=0;
     int one=0;
     for (int i = 0; i<v[cur].size(); i++){
@@ -28,12 +24,11 @@ void recur(int cur){
         recur(nxt);
 
         zero+=dp[nxt][1];
-        one=max(one, min(dp[nxt][0],dp[nxt][1]));
+        one+=min(dp[nxt][0],dp[nxt][1]);
     }
 
     dp[cur][0]=zero;
     dp[cur][1]=one+1;
-
 }
 
 int main() {
