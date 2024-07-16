@@ -15,7 +15,7 @@ int main() {
     while (tmp<num) tmp*=b;
     if (tmp>num) tmp/=b;
 
-    while (num!=0){
+    while (tmp!=0){
         cout << num/tmp;
         num%=tmp;
         tmp/=b;
