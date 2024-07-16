@@ -13,7 +13,7 @@ int main() {
     }
 
     while (tmp<num) tmp*=b;
-    if (tmp>num) tmp/=b;
+    tmp/=b;
 
     while (tmp!=0){
         cout << num/tmp;
