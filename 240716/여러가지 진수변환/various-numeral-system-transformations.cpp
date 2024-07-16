@@ -17,5 +17,7 @@ int main() {
         x/=b;
     }
 
+    if (n) cout << n;
+
     return 0;
 }
