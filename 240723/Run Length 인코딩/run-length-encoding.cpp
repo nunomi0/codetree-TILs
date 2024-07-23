@@ -17,14 +17,12 @@ int main() {
         if (s[i]==s[i-1]) cnt++;
         else {
             ans+=s[i-1]+to_string(cnt);
-            l+=2;
             cnt=1;
         }
     }
     ans+=s[s.length()-1]+to_string(cnt);
-    l+=2;
     
-    cout << l << '\n' << ans;
+    cout << ans.length() << '\n' << ans;
 
     return 0;
 }
