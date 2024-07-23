@@ -5,7 +5,7 @@ string s,p;
 
 int main() {
     cin >> s >> p;
-    for (int i = 0; i<s.length()-p.length(); i++){
+    for (int i = 0; i<s.length()-p.length()+1; i++){
         bool check=1;
         for (int j = 0; j<p.length(); j++){
             if (s[i+j]!=p[j]) check=0;
