@@ -9,7 +9,7 @@ int l=0;
 int main() {
     cin >> s;
     if (s.length()==1) {
-        cout << 1 << '\n' << s[0] << 1;
+        cout << 2 << '\n' << s[0] << 1;
         return 0;
     }
 
