@@ -8,7 +8,10 @@ int l=0;
 
 int main() {
     cin >> s;
-    if (s.length()==1) cout << 1 << '\n' << s[0] << 1;
+    if (s.length()==1) {
+        cout << 1 << '\n' << s[0] << 1;
+        return 0;
+    }
 
     for (int i = 1; i<s.length(); i++){
         if (s[i]==s[i-1]) cnt++;
