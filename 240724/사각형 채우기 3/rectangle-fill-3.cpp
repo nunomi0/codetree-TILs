@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-int n,dp[1010];
+long long n,dp[1010];
 
 int main() {
 
