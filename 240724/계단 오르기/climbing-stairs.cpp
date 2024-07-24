@@ -8,8 +8,9 @@ int main() {
     cin >> n;
     dp[0]=1;
     dp[2]=1;
-    for (int i = 3; i <n; i++){
+    for (int i = 3; i <= n; i++){
         dp[i]=dp[i-2]+dp[i-3];
+        //cout << i << ' ' << dp[i] << '\n';
     }
     cout << dp[n]%10007;
     return 0;
