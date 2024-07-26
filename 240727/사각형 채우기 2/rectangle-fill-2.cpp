@@ -9,8 +9,8 @@ int main() {
     dp[2]=3;
 
     for (int i = 3; i<=n; i++){
-        dp[i]=dp[i-2]*2+dp[i-1];
+        dp[i]=(dp[i-2]*2+dp[i-1])%10007;
     }
-    cout << dp[n];
+    cout << dp[n]%10007;
     return 0;
 }
