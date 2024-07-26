@@ -1,22 +1,22 @@
 #include <iostream>
 using namespace std;
 
-// 항상 꼬리에 붙인다
-
 int n, dp[20];
+
+int cal(int t){
+    if (dp[t]!=-1) return dp[t];
+    if (t<=1) return 1;
+    int cnt=0;
+    for (int i = 0 ; i<n; i++){
+        cnt+=cal(i)*cal(n-i-1);
+    }
+    return dp[t]=cnt;
+}
 
 int main() {
 
     cin >> n;
-
-    dp[0]=1;
-    dp[1]=1;
-    dp[2]=2;
-    dp[3]=5;
-
-    for (int i = 4; i<=n; i++){
-        dp[i]=dp[i-1]/5*4*2+dp[i-1]/5*4;
-    }
-    cout << dp[n];
+    for (int i = 0; i<20; i++) dp[i]=-1;
+    cout << cal(n);
     return 0;
 }
