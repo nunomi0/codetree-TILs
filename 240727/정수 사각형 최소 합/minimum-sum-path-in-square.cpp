@@ -14,6 +14,7 @@ int main() {
     for (int i = 1; i<=n; i++){
         for (int j = n; j>0; j--){
             if (i==1) arr[i][j]+=arr[i][j+1];
+            else if (j==n) arr[i][j]+=arr[i-1][j];
             else arr[i][j]+=min(arr[i-1][j], arr[i][j+1]);
         }
     }
