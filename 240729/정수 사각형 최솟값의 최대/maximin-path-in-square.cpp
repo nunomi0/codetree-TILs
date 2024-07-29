@@ -16,9 +16,12 @@ int main() {
     }
     for (int i = 1; i<=n; i++){
         for (int j = 1; j<=n; j++){
-            arr[i][j]=min(arr[i][j],max(arr[i-1][j],arr[i][j-1]));
+            if (i==1) arr[i][j]=min(arr[i][j],arr[i][j-1]);
+            else if (j==1) arr[i][j]=min(arr[i][j],arr[i-1][j]);
+            else arr[i][j]=min(arr[i][j],max(arr[i-1][j],arr[i][j-1]));
         }
     }
+
     cout << arr[n][n];
     return 0;
 }
